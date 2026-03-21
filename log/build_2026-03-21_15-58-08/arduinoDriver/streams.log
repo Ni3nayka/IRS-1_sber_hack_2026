@@ -1,0 +1,21 @@
+[4.136s] Invoking command in '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/arduinoDriver': PYTHONPATH=/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/arduinoDriver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/arduinoDriver/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/arduinoDriver build --build-base /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/arduinoDriver/build install --record /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/arduinoDriver/install.log --single-version-externally-managed install_data
+[4.957s] running egg_info
+[5.047s] writing ../build/arduinoDriver/arduinoDriver.egg-info/PKG-INFO
+[5.048s] writing dependency_links to ../build/arduinoDriver/arduinoDriver.egg-info/dependency_links.txt
+[5.049s] writing entry points to ../build/arduinoDriver/arduinoDriver.egg-info/entry_points.txt
+[5.050s] writing requirements to ../build/arduinoDriver/arduinoDriver.egg-info/requires.txt
+[5.050s] writing top-level names to ../build/arduinoDriver/arduinoDriver.egg-info/top_level.txt
+[5.206s] reading manifest file '../build/arduinoDriver/arduinoDriver.egg-info/SOURCES.txt'
+[5.208s] writing manifest file '../build/arduinoDriver/arduinoDriver.egg-info/SOURCES.txt'
+[5.208s] running build
+[5.209s] running build_py
+[5.209s] running install
+[5.221s] running install_lib
+[5.286s] running install_data
+[5.287s] running install_egg_info
+[5.338s] removing '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/arduinoDriver/lib/python3.12/site-packages/arduinoDriver-0.0.0-py3.12.egg-info' (and everything under it)
+[5.339s] Copying ../build/arduinoDriver/arduinoDriver.egg-info to /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/arduinoDriver/lib/python3.12/site-packages/arduinoDriver-0.0.0-py3.12.egg-info
+[5.342s] running install_scripts
+[5.741s] Installing arduinoDriver script to /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/arduinoDriver/lib/arduinoDriver
+[5.741s] writing list of installed files to '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/arduinoDriver/install.log'
+[5.836s] Invoked command in '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/arduinoDriver' returned '0': PYTHONPATH=/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/arduinoDriver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/arduinoDriver/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/arduinoDriver build --build-base /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/arduinoDriver/build install --record /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/arduinoDriver/install.log --single-version-externally-managed install_data

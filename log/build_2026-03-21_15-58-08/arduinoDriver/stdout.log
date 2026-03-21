@@ -1,0 +1,19 @@
+running egg_info
+writing ../build/arduinoDriver/arduinoDriver.egg-info/PKG-INFO
+writing dependency_links to ../build/arduinoDriver/arduinoDriver.egg-info/dependency_links.txt
+writing entry points to ../build/arduinoDriver/arduinoDriver.egg-info/entry_points.txt
+writing requirements to ../build/arduinoDriver/arduinoDriver.egg-info/requires.txt
+writing top-level names to ../build/arduinoDriver/arduinoDriver.egg-info/top_level.txt
+reading manifest file '../build/arduinoDriver/arduinoDriver.egg-info/SOURCES.txt'
+writing manifest file '../build/arduinoDriver/arduinoDriver.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/arduinoDriver/lib/python3.12/site-packages/arduinoDriver-0.0.0-py3.12.egg-info' (and everything under it)
+Copying ../build/arduinoDriver/arduinoDriver.egg-info to /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/arduinoDriver/lib/python3.12/site-packages/arduinoDriver-0.0.0-py3.12.egg-info
+running install_scripts
+Installing arduinoDriver script to /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/arduinoDriver/lib/arduinoDriver
+writing list of installed files to '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/arduinoDriver/install.log'

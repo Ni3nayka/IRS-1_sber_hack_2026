@@ -1,0 +1,24 @@
+[4.063s] Invoking command in '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/main': PYTHONPATH=/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/main/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/main/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/main build --build-base /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/main/build install --record /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/main/install.log --single-version-externally-managed install_data
+[5.007s] running egg_info
+[5.063s] writing ../build/main/main.egg-info/PKG-INFO
+[5.064s] writing dependency_links to ../build/main/main.egg-info/dependency_links.txt
+[5.064s] writing entry points to ../build/main/main.egg-info/entry_points.txt
+[5.065s] writing requirements to ../build/main/main.egg-info/requires.txt
+[5.065s] writing top-level names to ../build/main/main.egg-info/top_level.txt
+[5.240s] reading manifest file '../build/main/main.egg-info/SOURCES.txt'
+[5.243s] writing manifest file '../build/main/main.egg-info/SOURCES.txt'
+[5.244s] running build
+[5.244s] running build_py
+[5.245s] copying main/main_node.py -> /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/main/build/lib/main
+[5.246s] running install
+[5.268s] running install_lib
+[5.370s] copying /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/main/build/lib/main/main_node.py -> /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/main/lib/python3.12/site-packages/main
+[5.373s] byte-compiling /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/main/lib/python3.12/site-packages/main/main_node.py to main_node.cpython-312.pyc
+[5.377s] running install_data
+[5.377s] running install_egg_info
+[5.491s] removing '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/main/lib/python3.12/site-packages/main-0.0.0-py3.12.egg-info' (and everything under it)
+[5.492s] Copying ../build/main/main.egg-info to /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/main/lib/python3.12/site-packages/main-0.0.0-py3.12.egg-info
+[5.493s] running install_scripts
+[5.921s] Installing main script to /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/main/lib/main
+[5.922s] writing list of installed files to '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/main/install.log'
+[6.004s] Invoked command in '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/main' returned '0': PYTHONPATH=/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/main/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/main/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/main build --build-base /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/main/build install --record /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/main/install.log --single-version-externally-managed install_data
