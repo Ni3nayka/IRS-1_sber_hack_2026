@@ -21,6 +21,12 @@ http://192.168.3.119:8080/
 
 git pull
 
+source /opt/ros/jazzy/setup.bash
+echo "source /opt/ros/jazzy/setup.bash" >> ~/.bashrc
+
+# если почему-то пишет что не находит запускаемый объект
+source ~/Документы/GitHub/IRS-1_sber_hack_2026/install/setup.bash
+
 colcon build
 source install/setup.bash
 
@@ -28,14 +34,16 @@ ls /dev/tty*
 
 ros2 run arduinoDriver arduinoDriver
 ros2 run arduinoDriver arduinoDriver --ros-args -p port:=/dev/ttyUSB0
-ros2 run arduinoDriver gy25 --ros-args -p port:=/dev/ttyUSB0
+ros2 run gy25 gy25 --ros-args -p port:=/dev/ttyUSB0
+
+ros2 topic list
 
 ros2 topic echo /encoder_left
 ros2 topic echo /encoder_right
 
-ros2 topic echo /topic_roll
-ros2 topic echo /topic_pitch
-ros2 topic echo /topic_yaw
+ros2 topic echo /gy25/roll
+ros2 topic echo /gy25/pitch
+ros2 topic echo /gy25/yaw
 
 ================================================================================================================================================
 
