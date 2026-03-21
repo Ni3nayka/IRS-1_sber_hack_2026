@@ -1,0 +1,32 @@
+[4.426s] Invoking command in '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/lidar': PYTHONPATH=/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/lidar/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/lidar/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/lidar build --build-base /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/lidar/build install --record /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/lidar/install.log --single-version-externally-managed install_data
+[5.185s] running egg_info
+[5.185s] creating ../build/lidar/lidar.egg-info
+[5.245s] writing ../build/lidar/lidar.egg-info/PKG-INFO
+[5.246s] writing dependency_links to ../build/lidar/lidar.egg-info/dependency_links.txt
+[5.247s] writing requirements to ../build/lidar/lidar.egg-info/requires.txt
+[5.247s] writing top-level names to ../build/lidar/lidar.egg-info/top_level.txt
+[5.248s] writing manifest file '../build/lidar/lidar.egg-info/SOURCES.txt'
+[5.365s] reading manifest file '../build/lidar/lidar.egg-info/SOURCES.txt'
+[5.367s] writing manifest file '../build/lidar/lidar.egg-info/SOURCES.txt'
+[5.367s] running build
+[5.368s] running build_py
+[5.368s] creating /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/lidar/build
+[5.369s] creating /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/lidar/build/lib
+[5.369s] creating /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/lidar/build/lib/lidar
+[5.369s] copying lidar/__init__.py -> /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/lidar/build/lib/lidar
+[5.370s] running install
+[5.381s] running install_lib
+[5.462s] creating /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/lidar/lib/python3.12/site-packages/lidar
+[5.463s] copying /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/lidar/build/lib/lidar/__init__.py -> /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/lidar/lib/python3.12/site-packages/lidar
+[5.465s] byte-compiling /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/lidar/lib/python3.12/site-packages/lidar/__init__.py to __init__.cpython-312.pyc
+[5.467s] running install_data
+[5.468s] creating /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/lidar/share/ament_index
+[5.469s] creating /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/lidar/share/ament_index/resource_index
+[5.470s] creating /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/lidar/share/ament_index/resource_index/packages
+[5.470s] copying resource/lidar -> /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/lidar/share/ament_index/resource_index/packages
+[5.471s] copying package.xml -> /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/lidar/share/lidar
+[5.471s] running install_egg_info
+[5.578s] Copying ../build/lidar/lidar.egg-info to /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/lidar/lib/python3.12/site-packages/lidar-0.0.0-py3.12.egg-info
+[5.582s] running install_scripts
+[6.146s] writing list of installed files to '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/lidar/install.log'
+[6.245s] Invoked command in '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/lidar' returned '0': PYTHONPATH=/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/lidar/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/lidar/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/lidar build --build-base /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/lidar/build install --record /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/lidar/install.log --single-version-externally-managed install_data

@@ -1,0 +1,262 @@
+[0.276s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.276s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7415c68d8a40>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7415c68d88c0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7415c68d88c0>>)
+[0.390s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.390s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.391s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.391s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.391s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.391s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.391s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026'
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.391s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.439s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.439s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.439s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.439s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.439s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.439s] Level 1:colcon.colcon_core.package_identification:_identify(arduinoDriver) by extensions ['ignore', 'ignore_ament_install']
+[0.439s] Level 1:colcon.colcon_core.package_identification:_identify(arduinoDriver) by extension 'ignore'
+[0.439s] Level 1:colcon.colcon_core.package_identification:_identify(arduinoDriver) by extension 'ignore_ament_install'
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(arduinoDriver) by extensions ['colcon_pkg']
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(arduinoDriver) by extension 'colcon_pkg'
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(arduinoDriver) by extensions ['colcon_meta']
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(arduinoDriver) by extension 'colcon_meta'
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(arduinoDriver) by extensions ['ros']
+[0.440s] Level 1:colcon.colcon_core.package_identification:_identify(arduinoDriver) by extension 'ros'
+[0.444s] DEBUG:colcon.colcon_core.package_identification:Package 'arduinoDriver' with type 'ros.ament_python' and name 'arduinoDriver'
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(gy25) by extensions ['ignore', 'ignore_ament_install']
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(gy25) by extension 'ignore'
+[0.444s] Level 1:colcon.colcon_core.package_identification:_identify(gy25) by extension 'ignore_ament_install'
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(gy25) by extensions ['colcon_pkg']
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(gy25) by extension 'colcon_pkg'
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(gy25) by extensions ['colcon_meta']
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(gy25) by extension 'colcon_meta'
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(gy25) by extensions ['ros']
+[0.445s] Level 1:colcon.colcon_core.package_identification:_identify(gy25) by extension 'ros'
+[0.445s] DEBUG:colcon.colcon_core.package_identification:Package 'gy25' with type 'ros.ament_python' and name 'gy25'
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(lidar) by extensions ['ignore', 'ignore_ament_install']
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(lidar) by extension 'ignore'
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(lidar) by extension 'ignore_ament_install'
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(lidar) by extensions ['colcon_pkg']
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(lidar) by extension 'colcon_pkg'
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(lidar) by extensions ['colcon_meta']
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(lidar) by extension 'colcon_meta'
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(lidar) by extensions ['ros']
+[0.446s] Level 1:colcon.colcon_core.package_identification:_identify(lidar) by extension 'ros'
+[0.447s] DEBUG:colcon.colcon_core.package_identification:Package 'lidar' with type 'ros.ament_python' and name 'lidar'
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(main) by extensions ['ignore', 'ignore_ament_install']
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(main) by extension 'ignore'
+[0.447s] Level 1:colcon.colcon_core.package_identification:_identify(main) by extension 'ignore_ament_install'
+[0.448s] Level 1:colcon.colcon_core.package_identification:_identify(main) by extensions ['colcon_pkg']
+[0.448s] Level 1:colcon.colcon_core.package_identification:_identify(main) by extension 'colcon_pkg'
+[0.448s] Level 1:colcon.colcon_core.package_identification:_identify(main) by extensions ['colcon_meta']
+[0.448s] Level 1:colcon.colcon_core.package_identification:_identify(main) by extension 'colcon_meta'
+[0.448s] Level 1:colcon.colcon_core.package_identification:_identify(main) by extensions ['ros']
+[0.448s] Level 1:colcon.colcon_core.package_identification:_identify(main) by extension 'ros'
+[0.448s] DEBUG:colcon.colcon_core.package_identification:Package 'main' with type 'ros.ament_python' and name 'main'
+[0.448s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.448s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.448s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.448s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.449s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.492s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.492s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.500s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 286 installed packages in /opt/ros/jazzy
+[0.503s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.548s] Level 5:colcon.colcon_core.verb:set package 'arduinoDriver' build argument 'cmake_args' from command line to 'None'
+[0.549s] Level 5:colcon.colcon_core.verb:set package 'arduinoDriver' build argument 'cmake_target' from command line to 'None'
+[0.549s] Level 5:colcon.colcon_core.verb:set package 'arduinoDriver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.549s] Level 5:colcon.colcon_core.verb:set package 'arduinoDriver' build argument 'cmake_clean_cache' from command line to 'False'
+[0.549s] Level 5:colcon.colcon_core.verb:set package 'arduinoDriver' build argument 'cmake_clean_first' from command line to 'False'
+[0.549s] Level 5:colcon.colcon_core.verb:set package 'arduinoDriver' build argument 'cmake_force_configure' from command line to 'False'
+[0.549s] Level 5:colcon.colcon_core.verb:set package 'arduinoDriver' build argument 'ament_cmake_args' from command line to 'None'
+[0.549s] Level 5:colcon.colcon_core.verb:set package 'arduinoDriver' build argument 'catkin_cmake_args' from command line to 'None'
+[0.549s] Level 5:colcon.colcon_core.verb:set package 'arduinoDriver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.549s] DEBUG:colcon.colcon_core.verb:Building package 'arduinoDriver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/arduinoDriver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/arduinoDriver', 'merge_install': False, 'path': '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/arduinoDriver', 'symlink_install': False, 'test_result_base': None}
+[0.549s] Level 5:colcon.colcon_core.verb:set package 'gy25' build argument 'cmake_args' from command line to 'None'
+[0.549s] Level 5:colcon.colcon_core.verb:set package 'gy25' build argument 'cmake_target' from command line to 'None'
+[0.549s] Level 5:colcon.colcon_core.verb:set package 'gy25' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.549s] Level 5:colcon.colcon_core.verb:set package 'gy25' build argument 'cmake_clean_cache' from command line to 'False'
+[0.549s] Level 5:colcon.colcon_core.verb:set package 'gy25' build argument 'cmake_clean_first' from command line to 'False'
+[0.549s] Level 5:colcon.colcon_core.verb:set package 'gy25' build argument 'cmake_force_configure' from command line to 'False'
+[0.549s] Level 5:colcon.colcon_core.verb:set package 'gy25' build argument 'ament_cmake_args' from command line to 'None'
+[0.549s] Level 5:colcon.colcon_core.verb:set package 'gy25' build argument 'catkin_cmake_args' from command line to 'None'
+[0.549s] Level 5:colcon.colcon_core.verb:set package 'gy25' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.549s] DEBUG:colcon.colcon_core.verb:Building package 'gy25' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/gy25', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/gy25', 'merge_install': False, 'path': '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/gy25', 'symlink_install': False, 'test_result_base': None}
+[0.550s] Level 5:colcon.colcon_core.verb:set package 'lidar' build argument 'cmake_args' from command line to 'None'
+[0.550s] Level 5:colcon.colcon_core.verb:set package 'lidar' build argument 'cmake_target' from command line to 'None'
+[0.550s] Level 5:colcon.colcon_core.verb:set package 'lidar' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.550s] Level 5:colcon.colcon_core.verb:set package 'lidar' build argument 'cmake_clean_cache' from command line to 'False'
+[0.550s] Level 5:colcon.colcon_core.verb:set package 'lidar' build argument 'cmake_clean_first' from command line to 'False'
+[0.550s] Level 5:colcon.colcon_core.verb:set package 'lidar' build argument 'cmake_force_configure' from command line to 'False'
+[0.550s] Level 5:colcon.colcon_core.verb:set package 'lidar' build argument 'ament_cmake_args' from command line to 'None'
+[0.550s] Level 5:colcon.colcon_core.verb:set package 'lidar' build argument 'catkin_cmake_args' from command line to 'None'
+[0.550s] Level 5:colcon.colcon_core.verb:set package 'lidar' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.550s] DEBUG:colcon.colcon_core.verb:Building package 'lidar' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/lidar', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/lidar', 'merge_install': False, 'path': '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/lidar', 'symlink_install': False, 'test_result_base': None}
+[0.550s] Level 5:colcon.colcon_core.verb:set package 'main' build argument 'cmake_args' from command line to 'None'
+[0.550s] Level 5:colcon.colcon_core.verb:set package 'main' build argument 'cmake_target' from command line to 'None'
+[0.550s] Level 5:colcon.colcon_core.verb:set package 'main' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.550s] Level 5:colcon.colcon_core.verb:set package 'main' build argument 'cmake_clean_cache' from command line to 'False'
+[0.550s] Level 5:colcon.colcon_core.verb:set package 'main' build argument 'cmake_clean_first' from command line to 'False'
+[0.550s] Level 5:colcon.colcon_core.verb:set package 'main' build argument 'cmake_force_configure' from command line to 'False'
+[0.550s] Level 5:colcon.colcon_core.verb:set package 'main' build argument 'ament_cmake_args' from command line to 'None'
+[0.550s] Level 5:colcon.colcon_core.verb:set package 'main' build argument 'catkin_cmake_args' from command line to 'None'
+[0.550s] Level 5:colcon.colcon_core.verb:set package 'main' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.550s] DEBUG:colcon.colcon_core.verb:Building package 'main' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/main', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/main', 'merge_install': False, 'path': '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/main', 'symlink_install': False, 'test_result_base': None}
+[0.550s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.551s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.552s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/arduinoDriver' with build type 'ament_python'
+[0.552s] Level 1:colcon.colcon_core.shell:create_environment_hook('arduinoDriver', 'ament_prefix_path')
+[0.555s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.555s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/arduinoDriver/share/arduinoDriver/hook/ament_prefix_path.ps1'
+[0.556s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/arduinoDriver/share/arduinoDriver/hook/ament_prefix_path.dsv'
+[0.557s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/arduinoDriver/share/arduinoDriver/hook/ament_prefix_path.sh'
+[0.558s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.558s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.562s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/gy25' with build type 'ament_python'
+[0.562s] Level 1:colcon.colcon_core.shell:create_environment_hook('gy25', 'ament_prefix_path')
+[0.563s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/gy25/share/gy25/hook/ament_prefix_path.ps1'
+[0.564s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/gy25/share/gy25/hook/ament_prefix_path.dsv'
+[0.564s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/gy25/share/gy25/hook/ament_prefix_path.sh'
+[0.565s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.565s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.569s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/lidar' with build type 'ament_python'
+[0.569s] Level 1:colcon.colcon_core.shell:create_environment_hook('lidar', 'ament_prefix_path')
+[0.570s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/lidar/share/lidar/hook/ament_prefix_path.ps1'
+[0.573s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/lidar/share/lidar/hook/ament_prefix_path.dsv'
+[0.574s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/lidar/share/lidar/hook/ament_prefix_path.sh'
+[0.576s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.576s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.587s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/main' with build type 'ament_python'
+[0.588s] Level 1:colcon.colcon_core.shell:create_environment_hook('main', 'ament_prefix_path')
+[0.589s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/main/share/main/hook/ament_prefix_path.ps1'
+[0.592s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/main/share/main/hook/ament_prefix_path.dsv'
+[0.594s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/main/share/main/hook/ament_prefix_path.sh'
+[0.596s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.597s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.270s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/arduinoDriver'
+[1.270s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.270s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.713s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/gy25'
+[1.713s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.713s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.190s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/lidar'
+[2.191s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.191s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.608s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/main'
+[2.609s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.609s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.667s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/gy25': PYTHONPATH=/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/gy25/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/gy25/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/gy25 build --build-base /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/gy25/build install --record /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/gy25/install.log --single-version-externally-managed install_data
+[4.747s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/arduinoDriver': PYTHONPATH=/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/arduinoDriver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/arduinoDriver/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/arduinoDriver build --build-base /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/arduinoDriver/build install --record /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/arduinoDriver/install.log --single-version-externally-managed install_data
+[4.963s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/main': PYTHONPATH=/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/main/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/main/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/main build --build-base /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/main/build install --record /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/main/install.log --single-version-externally-managed install_data
+[4.996s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/lidar': PYTHONPATH=/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/lidar/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/lidar/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/lidar build --build-base /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/lidar/build install --record /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/lidar/install.log --single-version-externally-managed install_data
+[6.523s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/arduinoDriver' returned '0': PYTHONPATH=/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/arduinoDriver/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/arduinoDriver/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/arduinoDriver build --build-base /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/arduinoDriver/build install --record /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/arduinoDriver/install.log --single-version-externally-managed install_data
+[6.540s] Level 1:colcon.colcon_core.environment:checking '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/arduinoDriver' for CMake module files
+[6.542s] Level 1:colcon.colcon_core.environment:checking '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/arduinoDriver' for CMake config files
+[6.544s] Level 1:colcon.colcon_core.environment:checking '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/arduinoDriver/lib'
+[6.545s] Level 1:colcon.colcon_core.environment:checking '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/arduinoDriver/bin'
+[6.545s] Level 1:colcon.colcon_core.environment:checking '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/arduinoDriver/lib/pkgconfig/arduinoDriver.pc'
+[6.546s] Level 1:colcon.colcon_core.environment:checking '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/arduinoDriver/lib/python3.12/site-packages'
+[6.546s] Level 1:colcon.colcon_core.shell:create_environment_hook('arduinoDriver', 'pythonpath')
+[6.547s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/arduinoDriver/share/arduinoDriver/hook/pythonpath.ps1'
+[6.548s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/arduinoDriver/share/arduinoDriver/hook/pythonpath.dsv'
+[6.549s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/arduinoDriver/share/arduinoDriver/hook/pythonpath.sh'
+[6.551s] Level 1:colcon.colcon_core.environment:checking '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/arduinoDriver/bin'
+[6.551s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(arduinoDriver)
+[6.552s] INFO:colcon.colcon_core.shell:Creating package script '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/arduinoDriver/share/arduinoDriver/package.ps1'
+[6.554s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/arduinoDriver/share/arduinoDriver/package.dsv'
+[6.555s] INFO:colcon.colcon_core.shell:Creating package script '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/arduinoDriver/share/arduinoDriver/package.sh'
+[6.557s] INFO:colcon.colcon_core.shell:Creating package script '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/arduinoDriver/share/arduinoDriver/package.bash'
+[6.559s] INFO:colcon.colcon_core.shell:Creating package script '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/arduinoDriver/share/arduinoDriver/package.zsh'
+[6.561s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/arduinoDriver/share/colcon-core/packages/arduinoDriver)
+[6.681s] Level 1:colcon.colcon_core.environment:checking '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/gy25' for CMake module files
+[6.684s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/gy25' returned '0': PYTHONPATH=/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/gy25/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/gy25/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/gy25 build --build-base /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/gy25/build install --record /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/gy25/install.log --single-version-externally-managed install_data
+[6.686s] Level 1:colcon.colcon_core.environment:checking '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/gy25' for CMake config files
+[6.688s] Level 1:colcon.colcon_core.environment:checking '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/gy25/lib'
+[6.688s] Level 1:colcon.colcon_core.environment:checking '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/gy25/bin'
+[6.688s] Level 1:colcon.colcon_core.environment:checking '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/gy25/lib/pkgconfig/gy25.pc'
+[6.689s] Level 1:colcon.colcon_core.environment:checking '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/gy25/lib/python3.12/site-packages'
+[6.689s] Level 1:colcon.colcon_core.shell:create_environment_hook('gy25', 'pythonpath')
+[6.690s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/gy25/share/gy25/hook/pythonpath.ps1'
+[6.691s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/gy25/share/gy25/hook/pythonpath.dsv'
+[6.692s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/gy25/share/gy25/hook/pythonpath.sh'
+[6.694s] Level 1:colcon.colcon_core.environment:checking '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/gy25/bin'
+[6.694s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gy25)
+[6.694s] INFO:colcon.colcon_core.shell:Creating package script '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/gy25/share/gy25/package.ps1'
+[6.695s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/gy25/share/gy25/package.dsv'
+[6.696s] INFO:colcon.colcon_core.shell:Creating package script '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/gy25/share/gy25/package.sh'
+[6.697s] INFO:colcon.colcon_core.shell:Creating package script '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/gy25/share/gy25/package.bash'
+[6.698s] INFO:colcon.colcon_core.shell:Creating package script '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/gy25/share/gy25/package.zsh'
+[6.699s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/gy25/share/colcon-core/packages/gy25)
+[6.814s] Level 1:colcon.colcon_core.environment:checking '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/lidar' for CMake module files
+[6.816s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/lidar' returned '0': PYTHONPATH=/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/lidar/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/lidar/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/lidar build --build-base /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/lidar/build install --record /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/lidar/install.log --single-version-externally-managed install_data
+[6.818s] Level 1:colcon.colcon_core.environment:checking '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/lidar' for CMake config files
+[6.820s] Level 1:colcon.colcon_core.environment:checking '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/lidar/lib'
+[6.821s] Level 1:colcon.colcon_core.environment:checking '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/lidar/bin'
+[6.821s] Level 1:colcon.colcon_core.environment:checking '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/lidar/lib/pkgconfig/lidar.pc'
+[6.822s] Level 1:colcon.colcon_core.environment:checking '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/lidar/lib/python3.12/site-packages'
+[6.822s] Level 1:colcon.colcon_core.shell:create_environment_hook('lidar', 'pythonpath')
+[6.823s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/lidar/share/lidar/hook/pythonpath.ps1'
+[6.825s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/lidar/share/lidar/hook/pythonpath.dsv'
+[6.827s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/lidar/share/lidar/hook/pythonpath.sh'
+[6.830s] Level 1:colcon.colcon_core.environment:checking '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/lidar/bin'
+[6.830s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(lidar)
+[6.831s] INFO:colcon.colcon_core.shell:Creating package script '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/lidar/share/lidar/package.ps1'
+[6.833s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/lidar/share/lidar/package.dsv'
+[6.834s] INFO:colcon.colcon_core.shell:Creating package script '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/lidar/share/lidar/package.sh'
+[6.836s] INFO:colcon.colcon_core.shell:Creating package script '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/lidar/share/lidar/package.bash'
+[6.836s] INFO:colcon.colcon_core.shell:Creating package script '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/lidar/share/lidar/package.zsh'
+[6.837s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/lidar/share/colcon-core/packages/lidar)
+[7.154s] Level 1:colcon.colcon_core.environment:checking '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/main' for CMake module files
+[7.155s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/main' returned '0': PYTHONPATH=/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/main/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/main/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/main build --build-base /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/main/build install --record /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/main/install.log --single-version-externally-managed install_data
+[7.156s] Level 1:colcon.colcon_core.environment:checking '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/main' for CMake config files
+[7.156s] Level 1:colcon.colcon_core.environment:checking '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/main/lib'
+[7.157s] Level 1:colcon.colcon_core.environment:checking '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/main/bin'
+[7.157s] Level 1:colcon.colcon_core.environment:checking '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/main/lib/pkgconfig/main.pc'
+[7.157s] Level 1:colcon.colcon_core.environment:checking '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/main/lib/python3.12/site-packages'
+[7.157s] Level 1:colcon.colcon_core.shell:create_environment_hook('main', 'pythonpath')
+[7.157s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/main/share/main/hook/pythonpath.ps1'
+[7.158s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/main/share/main/hook/pythonpath.dsv'
+[7.159s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/main/share/main/hook/pythonpath.sh'
+[7.160s] Level 1:colcon.colcon_core.environment:checking '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/main/bin'
+[7.160s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(main)
+[7.160s] INFO:colcon.colcon_core.shell:Creating package script '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/main/share/main/package.ps1'
+[7.161s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/main/share/main/package.dsv'
+[7.162s] INFO:colcon.colcon_core.shell:Creating package script '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/main/share/main/package.sh'
+[7.162s] INFO:colcon.colcon_core.shell:Creating package script '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/main/share/main/package.bash'
+[7.163s] INFO:colcon.colcon_core.shell:Creating package script '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/main/share/main/package.zsh'
+[7.163s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/main/share/colcon-core/packages/main)
+[7.163s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[7.164s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[7.164s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[7.164s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[7.184s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[7.184s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[7.184s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[7.198s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[7.200s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/local_setup.ps1'
+[7.205s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/_local_setup_util_ps1.py'
+[7.211s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/setup.ps1'
+[7.215s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/local_setup.sh'
+[7.218s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/_local_setup_util_sh.py'
+[7.221s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/setup.sh'
+[7.225s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/local_setup.bash'
+[7.228s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/setup.bash'
+[7.234s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/local_setup.zsh'
+[7.236s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/setup.zsh'

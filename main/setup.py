@@ -17,13 +17,14 @@ setup(
     maintainer_email='53381511+Ni3nayka@users.noreply.github.com',
     description='TODO: Package description',
     license='TODO: License declaration',
-    extras_require={
-        'test': [
-            'pytest',
-        ],
-    },
+    # extras_require={
+    #     'test': [
+    #         'pytest',
+    #     ],
+    # },
     entry_points={
         'console_scripts': [
+            'main = main.main_node:main', # НОДА
         ],
     },
 )

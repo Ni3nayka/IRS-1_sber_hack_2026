@@ -1,0 +1,19 @@
+[4.295s] Invoking command in '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/lidar': PYTHONPATH=/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/lidar/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/lidar/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/lidar build --build-base /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/lidar/build install --record /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/lidar/install.log --single-version-externally-managed install_data
+[5.451s] running egg_info
+[5.537s] writing ../build/lidar/lidar.egg-info/PKG-INFO
+[5.538s] writing dependency_links to ../build/lidar/lidar.egg-info/dependency_links.txt
+[5.539s] writing requirements to ../build/lidar/lidar.egg-info/requires.txt
+[5.539s] writing top-level names to ../build/lidar/lidar.egg-info/top_level.txt
+[5.705s] reading manifest file '../build/lidar/lidar.egg-info/SOURCES.txt'
+[5.707s] writing manifest file '../build/lidar/lidar.egg-info/SOURCES.txt'
+[5.707s] running build
+[5.707s] running build_py
+[5.707s] running install
+[5.721s] running install_lib
+[5.774s] running install_data
+[5.774s] running install_egg_info
+[5.819s] removing '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/lidar/lib/python3.12/site-packages/lidar-0.0.0-py3.12.egg-info' (and everything under it)
+[5.819s] Copying ../build/lidar/lidar.egg-info to /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/lidar/lib/python3.12/site-packages/lidar-0.0.0-py3.12.egg-info
+[5.822s] running install_scripts
+[6.076s] writing list of installed files to '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/lidar/install.log'
+[6.110s] Invoked command in '/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/lidar' returned '0': PYTHONPATH=/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/lidar/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/lidar/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/lidar build --build-base /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/lidar/build install --record /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/build/lidar/install.log --single-version-externally-managed install_data
