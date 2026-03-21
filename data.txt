@@ -1,0 +1,45 @@
+
+ENC: 0 0
+Servo finger: 90 - take; 180 - drop
+servo arm: 470 - down; 60 - up
+10000 enc sum = 47 cm
+1 cm = 213 enc sum
+
+================================================================================================================================================
+
+# https://github.com/balena-io/etcher
+lsblk
+sudo dd if=/dev/sda of=~/Загрузки/backup.img bs=4M status=progress
+
+================================================================================================================================================
+
+ssh ubuntu@192.168.3.119
+sudo poweroff
+
+# VS code
+http://192.168.3.119:8080/
+
+git pull
+
+colcon build
+source install/setup.bash
+
+ls /dev/tty*
+
+ros2 run arduinoDriver arduinoDriver
+ros2 run arduinoDriver arduinoDriver --ros-args -p port:=/dev/ttyUSB0
+ros2 run arduinoDriver gy25 --ros-args -p port:=/dev/ttyUSB0
+
+ros2 topic echo /encoder_left
+ros2 topic echo /encoder_right
+
+ros2 topic echo /topic_roll
+ros2 topic echo /topic_pitch
+ros2 topic echo /topic_yaw
+
+================================================================================================================================================
+
+в коде ардуино robot.h - redefenition #define PARROT_IN_ONE_FULL_ROTATION_WHEEL
+12.24 тика энкодера на мм движения (одним колесом)
+
+
