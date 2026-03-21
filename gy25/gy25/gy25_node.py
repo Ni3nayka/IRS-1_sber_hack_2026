@@ -38,6 +38,17 @@ class Gy25Node(Node):
             self.get_logger().error(f'Failed to open serial port: {e}')
             return
 
+        # Send activation command to GY-25 (request continuous angle output)
+        # Send activation command to GY-25 (as in Arduino example)
+        try:
+            # Команда из Arduino: GY25::write(0XA5); GY25::write(0X52);
+            self.ser.write(b'\xA5\x52')
+            self.get_logger().info('Activation command (0xA5 0x52) sent to GY-25')
+            # Дадим модулю время на подготовку
+            time.sleep(0.5)
+        except Exception as e:
+            self.get_logger().error(f'Failed to send activation command: {e}')
+            
         # Start background thread for reading
         self.running = True
         self.thread = threading.Thread(target=self.read_loop)
@@ -49,47 +60,52 @@ class Gy25Node(Node):
         buffer = bytearray()
         while self.running and rclpy.ok():
             try:
-                # Read up to 100 bytes (or until timeout)
+                # Read up to 100 bytes
                 data = self.ser.read(100)
-                if not data:
+                if data:
+                    # Log raw data for debugging (use INFO level to always see it)
+                    self.get_logger().info(f'Raw data received: {data.hex()}')
+                else:
+                    # No data, just continue
                     continue
+
                 buffer.extend(data)
-                self.get_logger().debug(f'Raw data: {data.hex()}')
 
                 # Search for start bytes 0xAA, 0xAA
                 while len(buffer) >= 2:
                     if buffer[0] == 0xAA and buffer[1] == 0xAA:
-                        # We have a potential start
-                        if len(buffer) >= 8:  # 2 start + 6 data + 1 checksum = 9 bytes total
-                            packet = buffer[:9]  # 2 start + 6 data + checksum
-                            # Validate checksum
+                        # Potential start of a packet
+                        if len(buffer) >= 9:  # 2 start + 6 data + 1 checksum
+                            packet = buffer[:9]
+                            # Verify checksum (sum of data bytes mod 256)
                             checksum = sum(packet[2:8]) & 0xFF
                             if checksum == packet[8]:
-                                # Parse angles (little‑endian, signed 16‑bit, scaled by 100)
+                                # Parse angles (little-endian, signed 16-bit)
                                 roll = struct.unpack('<h', packet[2:4])[0]
                                 pitch = struct.unpack('<h', packet[4:6])[0]
                                 yaw = struct.unpack('<h', packet[6:8])[0]
-                                # Publish as Int32 (the original integer scaled value)
+                                # Publish
                                 self.pub_roll.publish(Int32(data=roll))
                                 self.pub_pitch.publish(Int32(data=pitch))
                                 self.pub_yaw.publish(Int32(data=yaw))
-                                self.get_logger().debug(f'Published: roll={roll}, pitch={pitch}, yaw={yaw}')
+                                self.get_logger().info(f'Published: roll={roll}, pitch={pitch}, yaw={yaw}')
                             else:
-                                self.get_logger().warn('Checksum mismatch, discarding packet')
-                            # Remove processed bytes
+                                self.get_logger().warn(f'Checksum mismatch: expected {packet[8]}, got {checksum}')
+                            # Remove processed packet
                             buffer = buffer[9:]
                         else:
-                            # Not enough data yet, wait for more
+                            # Not enough data yet, break to wait for more
                             break
                     else:
-                        # Discard bytes until we find a start byte
+                        # No valid start, discard first byte
                         buffer.pop(0)
 
             except serial.SerialException as e:
                 self.get_logger().error(f'Serial error: {e}')
-                time.sleep(1)  # wait before re‑trying
+                time.sleep(1)
             except Exception as e:
                 self.get_logger().error(f'Unexpected error: {e}')
+                time.sleep(0.1)
 
     def destroy_node(self):
         """Clean up on shutdown."""
