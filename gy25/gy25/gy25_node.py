@@ -54,6 +54,7 @@ class Gy25Node(Node):
                 if not data:
                     continue
                 buffer.extend(data)
+                self.get_logger().debug(f'Raw data: {data.hex()}')
 
                 # Search for start bytes 0xAA, 0xAA
                 while len(buffer) >= 2:
