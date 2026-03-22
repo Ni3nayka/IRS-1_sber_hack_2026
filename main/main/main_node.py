@@ -2,6 +2,8 @@
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Int32
+from concurrent.futures import Future
+import time
 
 class MotorTestEncoder(Node):
     def __init__(self):
@@ -11,94 +13,94 @@ class MotorTestEncoder(Node):
         self.sub_enc_left = self.create_subscription(Int32, 'encoder_left', self.enc_left_callback, 10)
         self.sub_enc_right = self.create_subscription(Int32, 'encoder_right', self.enc_right_callback, 10)
 
-        self.speed = 20
-        self.target_sum = 10000
-        self.check_rate = 20.0
-
         self.enc_left = 0
         self.enc_right = 0
         self.enc_left_start = None
         self.enc_right_start = None
-        self.moving = False
-        self.test_complete = False
-        self.initialized = False
-
-        self.timer = self.create_timer(1.0 / self.check_rate, self.timer_callback)
-        self.get_logger().info('Motor test encoder node started, waiting for encoder data...')
+        self.init_future = Future()
+        self.target_future = Future()
+        self.target_sum = 0
 
     def enc_left_callback(self, msg):
         self.enc_left = msg.data
         if self.enc_left_start is None:
             self.enc_left_start = msg.data
             self.get_logger().info(f'Initial left encoder: {self.enc_left_start}')
-            self.check_initialized()
+            self._check_init()
+        self._check_target()
 
     def enc_right_callback(self, msg):
         self.enc_right = msg.data
         if self.enc_right_start is None:
             self.enc_right_start = msg.data
             self.get_logger().info(f'Initial right encoder: {self.enc_right_start}')
-            self.check_initialized()
+            self._check_init()
+        self._check_target()
 
-    def check_initialized(self):
-        if not self.initialized and self.enc_left_start is not None and self.enc_right_start is not None:
-            self.initialized = True
-            self.get_logger().info('Both encoders initialized, starting motors...')
-            self.start_motors()
+    def _check_init(self):
+        if (self.enc_left_start is not None and self.enc_right_start is not None and
+                not self.init_future.done()):
+            self.init_future.set_result(True)
 
-    def start_motors(self):
-        self.pub_left.publish(Int32(data=self.speed))
-        self.pub_right.publish(Int32(data=self.speed))
-        self.get_logger().info(f'Motors started at speed {self.speed}')
-        self.moving = True
+    def _check_target(self):
+        if (self.enc_left_start is None or self.enc_right_start is None or
+                self.target_future.done()):
+            return
+        traveled_left = abs(self.enc_left - self.enc_left_start)
+        traveled_right = abs(self.enc_right - self.enc_right_start)
+        total = traveled_left + traveled_right
+        self.get_logger().info(f'Traveled: left={traveled_left}, right={traveled_right}, total={total}')
+        if total >= self.target_sum:
+            self.target_future.set_result(True)
+
+    def start_motors(self, left_speed, right_speed):
+        self.pub_left.publish(Int32(data=left_speed))
+        self.pub_right.publish(Int32(data=right_speed))
+        self.get_logger().info(f'Motors started: left={left_speed}, right={right_speed}')
 
     def stop_motors(self):
         self.pub_left.publish(Int32(data=0))
         self.pub_right.publish(Int32(data=0))
         self.get_logger().info('Motors stopped')
-        self.moving = False
 
-    def timer_callback(self):
-        if self.test_complete:
-            return
+    def move(self, left_speed, right_speed, enc_delta, delay_after=1.0):
+        """Выполнить движение на заданное расстояние (в импульсах энкодеров)."""
+        # Запоминаем текущие значения энкодеров как стартовые для этого движения
+        self.enc_left_start = self.enc_left
+        self.enc_right_start = self.enc_right
+        self.target_sum = enc_delta
+        self.target_future = Future()          # новый future для этого движения
 
-        # Если ещё не инициализированы, просто ждём
-        if not self.initialized:
-            return
+        self.get_logger().info('Robot move - start')
+        self.start_motors(left_speed, right_speed)
+        rclpy.spin_until_future_complete(self, self.target_future)
+        self.get_logger().info('Robot move - end')
+        self.stop_motors()
 
-        # Если моторы ещё не запущены (хотя инициализированы), запускаем
-        if not self.moving:
-            self.start_motors()
-            return
+        if delay_after > 0:
+            self.get_logger().info(f'Waiting {delay_after} seconds before next action...')
+            time.sleep(delay_after)
 
-        # Вычисляем пройденное расстояние
-        traveled_left = self.enc_left - self.enc_left_start
-        traveled_right = self.enc_right - self.enc_right_start
-        total_traveled = traveled_left + traveled_right
-        self.get_logger().info(
-            f'Traveled: left={traveled_left}, right={traveled_right}, total={total_traveled}'
-        )
+    def algorithm(self):
+        """Основной алгоритм: последовательные шаги с ожиданием."""
+        self.get_logger().info('Algorithm: waiting for encoder initialization...')
+        rclpy.spin_until_future_complete(self, self.init_future)
+        self.get_logger().info('Algorithm: initialization done, starting motors')
 
-        if total_traveled >= self.target_sum:
-            self.stop_motors()
-            self.get_logger().info(f'Target reached: {total_traveled} >= {self.target_sum}. Test finished.')
-            self.test_complete = True
-            self.timer.cancel()
-            self.destroy_node()
-            if rclpy.ok():
-                rclpy.shutdown()
+        # MAIN
+        self.move(20, 20, 10000, delay_after=2.0)
+        self.move(20, 20, 10000, delay_after=2.0)
+
+        self.get_logger().info('Algorithm: finishing node')
+        self.destroy_node()
+        if rclpy.ok():
+            rclpy.shutdown()
+
 
 def main(args=None):
     rclpy.init(args=args)
     node = MotorTestEncoder()
-    try:
-        rclpy.spin(node)
-    except KeyboardInterrupt:
-        pass
-    finally:
-        if rclpy.ok():
-            node.destroy_node()
-            rclpy.shutdown()
+    node.algorithm()
 
 if __name__ == '__main__':
     main()

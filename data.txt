@@ -26,6 +26,8 @@ echo "source /opt/ros/jazzy/setup.bash" >> ~/.bashrc
 
 # если почему-то пишет что не находит запускаемый объект
 source ~/Документы/GitHub/IRS-1_sber_hack_2026/install/setup.bash
+source /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/setup.bash
+
 
 colcon build
 source install/setup.bash
@@ -35,6 +37,8 @@ ls /dev/tty*
 ros2 run arduinoDriver arduinoDriver
 ros2 run arduinoDriver arduinoDriver --ros-args -p port:=/dev/ttyUSB0
 ros2 run gy25 gy25 --ros-args -p port:=/dev/ttyUSB0
+ros2 run arucoStartDetect arucoStartDetect
+ros2 run main main
 
 ros2 topic list
 

@@ -9,59 +9,55 @@ import numpy as np
 class ArucoDetector(Node):
     def __init__(self):
         super().__init__('aruco_detector')
-        # Publisher for the detection flag
+        # Публикатор в топик arucoStartDetect
         self.publisher = self.create_publisher(Int8, 'arucoStartDetect', 10)
-        # Camera device (usually /dev/video0)
+        
+        # Открываем камеру (0 — первая USB-камера)
         self.cap = cv2.VideoCapture(0)
         if not self.cap.isOpened():
-            self.get_logger().error('Could not open camera')
-            raise RuntimeError('Camera not accessible')
+            self.get_logger().error('Не удалось открыть камеру')
+            raise RuntimeError('Камера недоступна')
         
-        # ArUco dictionary and parameters
-        self.aruco_dict = aruco.Dictionary_get(aruco.DICT_6X6_250)
-        self.parameters = aruco.DetectorParameters_create()
-        self.target_id = 25   # Change to your desired marker ID
+        # Настройка детектора ArUco (OpenCV 4.x)
+        self.aruco_dict = aruco.getPredefinedDictionary(aruco.DICT_6X6_250)
+        self.parameters = aruco.DetectorParameters()
+        self.detector = aruco.ArucoDetector(self.aruco_dict, self.parameters)
+        self.target_id = 25   # ID искомого маркера
         
-        # Timer to process frames periodically (e.g., 30 fps)
-        self.timer = self.create_timer(1.0/30.0, self.detect_callback)
-        self.get_logger().info('ArUco detector node started')
+        # Таймер для периодического опроса камеры (30 fps)
+        self.timer = self.create_timer(1.0 / 30.0, self.detect_callback)
+        self.get_logger().info('Нода детектора ArUco запущена')
 
     def detect_callback(self):
         ret, frame = self.cap.read()
         if not ret:
-            self.get_logger().warn('Failed to grab frame')
+            self.get_logger().warn('Не удалось получить кадр')
             return
         
-        # Convert to grayscale for detection
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         
-        # Detect markers
-        corners, ids, rejected = aruco.detectMarkers(gray, self.aruco_dict, parameters=self.parameters)
+        # Детекция маркеров
+        corners, ids, rejected = self.detector.detectMarkers(gray)
         
-        # Check if our target ID is present
-        detected = 0
+        # Логируем все найденные ID
         if ids is not None:
-            for i, marker_id in enumerate(ids.flatten()):
-                if marker_id == self.target_id:
-                    detected = 1
-                    # Optional: draw the marker outline on the frame (for debugging)
-                    aruco.drawDetectedMarkers(frame, corners)
-                    cv2.putText(frame, f"ID {self.target_id} DETECTED", (10,30),
-                                cv2.FONT_HERSHEY_SIMPLEX, 1, (0,255,0), 2)
-                    break
+            marker_ids = ids.flatten().tolist()
+            self.get_logger().info(f'Обнаружены маркеры: {marker_ids}')
+        else:
+            self.get_logger().info('Маркеры не обнаружены')
         
-        # Publish result
+        # Проверяем наличие целевого ID
+        detected = 0
+        if ids is not None and self.target_id in ids:
+            detected = 1
+        
+        # Публикуем результат
         msg = Int8()
         msg.data = detected
         self.publisher.publish(msg)
-        
-        # Show frame (only if you want to see the video; remove in production)
-        cv2.imshow('ArUco Detector', frame)
-        cv2.waitKey(1)
 
     def destroy_node(self):
         self.cap.release()
-        cv2.destroyAllWindows()
         super().destroy_node()
 
 def main(args=None):
