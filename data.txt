@@ -27,6 +27,11 @@ echo "source /opt/ros/jazzy/setup.bash" >> ~/.bashrc
 # если почему-то пишет что не находит запускаемый объект
 source ~/Документы/GitHub/IRS-1_sber_hack_2026/install/setup.bash
 source /home/ni3nayka/Документы/GitHub/IRS-1_sber_hack_2026/install/setup.bash
+source /home/ubuntu/IRS-1_sber_hack_2026/install/setup.bash
+
+source /opt/ros/jazzy/setup.bash
+echo "source /opt/ros/jazzy/setup.bash" >> ~/.bashrc
+source /home/ubuntu/IRS-1_sber_hack_2026/install/setup.bash
 
 
 colcon build
