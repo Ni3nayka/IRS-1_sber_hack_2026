@@ -3,13 +3,14 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Int32
 from concurrent.futures import Future
-import time
 
 class MotorTestEncoder(Node):
     def __init__(self):
         super().__init__('motor_test_encoder')
         self.pub_left = self.create_publisher(Int32, 'motor_speed_left', 10)
         self.pub_right = self.create_publisher(Int32, 'motor_speed_right', 10)
+        self.pub_servo_1 = self.create_publisher(Int32, 'servo_angle_1', 10)
+        self.pub_servo_2 = self.create_publisher(Int32, 'servo_angle_2', 10)
         self.sub_enc_left = self.create_subscription(Int32, 'encoder_left', self.enc_left_callback, 10)
         self.sub_enc_right = self.create_subscription(Int32, 'encoder_right', self.enc_right_callback, 10)
 
@@ -63,13 +64,22 @@ class MotorTestEncoder(Node):
         self.pub_right.publish(Int32(data=0))
         self.get_logger().info('Motors stopped')
 
+    def wait(self, duration):
+        """Ждать duration секунд, обрабатывая входящие сообщения ROS2."""
+        future = Future()
+        timer = self.create_timer(duration, lambda: future.set_result(True))
+        rclpy.spin_until_future_complete(self, future)
+        timer.cancel()
+        self.get_logger().debug(f'Wait of {duration}s finished')
+
     def move(self, left_speed, right_speed, enc_delta, delay_after=1.0):
         """Выполнить движение на заданное расстояние (в импульсах энкодеров)."""
+        # Сначала создаём новый future, чтобы избежать состояния гонки
+        self.target_future = Future()
         # Запоминаем текущие значения энкодеров как стартовые для этого движения
         self.enc_left_start = self.enc_left
         self.enc_right_start = self.enc_right
         self.target_sum = enc_delta
-        self.target_future = Future()          # новый future для этого движения
 
         self.get_logger().info('Robot move - start')
         self.start_motors(left_speed, right_speed)
@@ -79,7 +89,7 @@ class MotorTestEncoder(Node):
 
         if delay_after > 0:
             self.get_logger().info(f'Waiting {delay_after} seconds before next action...')
-            time.sleep(delay_after)
+            self.wait(delay_after)
 
     def algorithm(self):
         """Основной алгоритм: последовательные шаги с ожиданием."""
@@ -88,8 +98,14 @@ class MotorTestEncoder(Node):
         self.get_logger().info('Algorithm: initialization done, starting motors')
 
         # MAIN
-        self.move(20, 20, 10000, delay_after=2.0)
-        self.move(20, 20, 10000, delay_after=2.0)
+        self.move(20, 20, 1000, delay_after=2.0)
+        self.move(20, 20, 1000, delay_after=2.0)
+        self.move(20, -20, 1000, delay_after=2.0)
+        self.pub_servo_1.publish(Int32(data=200))
+        self.pub_servo_2.publish(Int32(data=90))
+        self.wait(2.0)
+        self.pub_servo_1.publish(Int32(data=470))
+        self.pub_servo_2.publish(Int32(data=180))
 
         self.get_logger().info('Algorithm: finishing node')
         self.destroy_node()
